@@ -1,0 +1,46 @@
+@use '../../assets/styles/mixins' as mixin;
+
+.header {
+  position: relative;
+  padding: 10px 20px;
+  height: 58px;
+  background-color: white;
+  box-shadow: var(--box-shadow-nav);
+  color: var(--primary);
+  img {
+    width: 130px;
+    cursor: pointer;
+  }
+}
+
+
+.headerList {
+  @include mixin.xs {
+    display: none;
+  }
+}
+
+.headerXs {
+  display: none !important;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  &:hover {
+    opacity: 0.8;
+  }
+  @include mixin.xs {
+    display: block !important;
+  }
+}
+.btn {
+  text-decoration: none;
+  padding: 8px 16px;
+  margin: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+}
+
+.activeLink {
+  background-color: #007bff;
+  color: #fff;
+}
